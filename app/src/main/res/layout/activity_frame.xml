@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FrameActivity"
+    android:orientation="vertical">
+
+    <fragment
+        android:id="@+id/fragment_home"
+        android:name="com.swufe.wy.slimming.HomeFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10" />
+
+    <fragment
+        android:id="@+id/fragment_plan"
+        android:name="com.swufe.wy.slimming.PlanFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10" />
+
+    <fragment
+        android:id="@+id/fragment_hot"
+        android:name="com.swufe.wy.slimming.HotFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="10" />
+
+    <RadioGroup
+        android:id="@+id/bottomGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/radioHome"
+            android:text="@string/radio_home"
+            android:drawableTop="@mipmap/home"
+            style="@style/radio_button"/>
+
+        <RadioButton
+            android:id="@+id/radioPlan"
+            android:text="@string/radio_plan"
+            android:drawableTop="@mipmap/plan"
+            style="@style/radio_button"/>
+
+        <RadioButton
+            android:id="@+id/radioHot"
+            android:text="@string/radio_hot"
+            android:drawableTop="@mipmap/hot"
+            style="@style/radio_button"/>
+
+    </RadioGroup>
+
+
+</LinearLayout>

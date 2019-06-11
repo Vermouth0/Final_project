@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.swufe.wy.slimming.HotFragment">
+
+    <TextView
+        android:id="@+id/hotTextView1"
+        style="@android:style/DeviceDefault.Light.ButtonBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/frame_hot"
+        android:gravity="center"
+        android:textSize="28sp" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/div_white" />
+
+
+</LinearLayout>
