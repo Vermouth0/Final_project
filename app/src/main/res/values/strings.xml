@@ -6,4 +6,6 @@
     <string name="frame_home">主页</string>
     <string name="frame_hot">热量</string>
     <string name="frame_plan">计划</string>
+    <string name="btn_edit_edit">编辑</string>
+    <string name="btn_edit_delete">删除</string>
 </resources>
