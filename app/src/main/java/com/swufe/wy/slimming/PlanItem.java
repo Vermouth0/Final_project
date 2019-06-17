@@ -14,11 +14,11 @@ public class PlanItem {
         finishTimes = 0;
     }
 
-    public PlanItem(String planTitle, String planContent, int times) {
+    public PlanItem(String planTitle, String planContent, int finishTimes) {
         super();
         this.planTitle = planTitle;
         this.planContent = planContent;
-        this.finishTimes = times;
+        this.finishTimes = finishTimes;
     }
 
     public int getId() {
