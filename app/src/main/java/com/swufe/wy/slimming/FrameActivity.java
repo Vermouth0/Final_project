@@ -25,6 +25,7 @@ public class FrameActivity extends FragmentActivity {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         setContentView(R.layout.activity_frame);
 
+
         //初始化对象
         mFragments = new Fragment[3];  //三个fragment
         fragmentManager = getSupportFragmentManager();

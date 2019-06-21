@@ -6,17 +6,9 @@
     tools:context=".PlanEditFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
 
-        <ListView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/plan_list_view"
-            android:layout_gravity="center_horizontal"/>
-    </LinearLayout>
-
+    <ListView android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
 
 </FrameLayout>
