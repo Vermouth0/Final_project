@@ -6,10 +6,9 @@
     tools:context=".PlanCheckFragment">
 
     <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/fragment_plan_check"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="hello_form_check" />
+
+    <ListView android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
 
 </RelativeLayout>

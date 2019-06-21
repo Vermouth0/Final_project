@@ -14,11 +14,6 @@ public class PlanItem {
         finishTimes = 0;
     }
 
-    public PlanItem(String planTitle, String planContent) {
-        super();
-        this.planTitle = planTitle;
-        this.planContent = planContent;
-    }
     public PlanItem(String planTitle, String planContent, int finishTimes) {
         super();
         this.planTitle = planTitle;
