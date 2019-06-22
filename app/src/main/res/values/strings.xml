@@ -8,5 +8,11 @@
     <string name="frame_plan">计划</string>
     <string name="btn_edit_edit">编辑</string>
     <string name="btn_edit_delete">删除</string>
-    <string name="btn_check" >打卡</string>
+    <string name="btn_check">打卡</string>
+    <string name="descript_plan_check">plan_check</string>
+    <string name="descript_plan_edit">plan_edit</string>
+    <string name="descript_plan_show">plan_show</string>
+    <string name="label_plan_check">计划打卡</string>
+    <string name="label_plan_edit">我的计划</string>
+    <string name="label_plan_show">计划报告</string>
 </resources>
