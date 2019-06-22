@@ -1,5 +1,6 @@
 package com.swufe.wy.slimming;
 
+import android.content.Intent;
 import android.util.Log;
 
 import java.sql.Connection;
@@ -40,11 +41,13 @@ public class SQLHelper {
         }
         return con;
     }
-    public void getPlan(Connection con1) throws java.sql.SQLException {
+
+    //获取所有计划内容（标题+内容），存放在全局变量planList中
+    public void getPlan(Connection con1)  {
          planList = new ArrayList<HashMap<String, String>>();
         //HashMap<String, String> map =new HashMap<String, String>(); 不能定义在这里，要定义在循环里
         try {
-            String sql = "select * from plan";        //查询表名为“user”的所有内容
+            String sql = "select * from plan";        //查询“plan”表的所有内容
             Statement stmt = con1.createStatement();        //创建Statement
             ResultSet rs = stmt.executeQuery(sql);          //ResultSet类似Cursor
 
@@ -74,4 +77,43 @@ public class SQLHelper {
         }
 
     }
+
+    //获取指定标题的计划内容（内容），返回content
+     public String queryPlanContent(String title) throws SQLException {
+        String content = "";
+        Connection con = getConnection();
+        String sql = "select * from plan where title = "+ title;
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+        while (rs.next()) {
+            content = rs.getString("content");
+        }
+        return content;
+    }
+
+    //获取指定标题的计划次数，返回int times
+    public int queryPlanTimes(String title) throws SQLException {
+        int times = 0;
+        Connection con = getConnection();
+        String sql = "select * from plan where title = "+ title;
+        Statement stmt = con.createStatement();
+        ResultSet rs = stmt.executeQuery(sql);
+        while (rs.next()) {
+            times = Integer.parseInt(rs.getString("content"));
+        }
+        return times;
+    }
+
+    //实现打卡次数的更新
+    public void addTimes(String title) throws SQLException {
+
+        int times = queryPlanTimes(title);
+        times = times+1;
+
+        Connection con = getConnection();
+        String sql = "update plan set times =" + times + " where title = "+ title;
+        Statement stmt = con.createStatement();
+        stmt.executeQuery(sql);
+    }
+
 }

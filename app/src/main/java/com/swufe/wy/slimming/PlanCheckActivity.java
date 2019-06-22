@@ -1,6 +1,8 @@
 package com.swufe.wy.slimming;
 
+import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.content.DialogInterface;
 import android.os.Handler;
 import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
@@ -9,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.SimpleAdapter;
+import android.widget.Toast;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -58,11 +61,7 @@ public class PlanCheckActivity extends ListActivity implements AdapterView.OnIte
 
             sqlHelper = new SQLHelper();
             Connection con = sqlHelper.getConnection();
-            try {
-                sqlHelper.getPlan(con);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
+            sqlHelper.getPlan(con);
 
             List<HashMap<String, String>> planList = sqlHelper.planList;
             Message msg = handler.obtainMessage(7);
@@ -75,6 +74,26 @@ public class PlanCheckActivity extends ListActivity implements AdapterView.OnIte
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
         Log.i(TAG, "onItemClick: 打卡");
-        Log.i(TAG, "onItemClick: parent="+parent);
+        Log.i(TAG, "onItemClick: position="+position);
+
+        //构造对话框
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("打卡确认").setMessage("确定完成任务了吗？").setPositiveButton("Yes",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(PlanCheckActivity.this,
+                        "打卡完成，继续坚持哟！",
+                        Toast.LENGTH_SHORT).show();
+            }
+        }).setNegativeButton("No",new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(PlanCheckActivity.this,
+                        "不要灰心，坚持就是胜利！",
+                        Toast.LENGTH_SHORT).show();
+            }
+        });
+        builder.setIcon(R.drawable.plan_1);
+        builder.create().show();
     }
 }
