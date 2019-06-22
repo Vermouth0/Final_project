@@ -11,6 +11,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.SimpleAdapter;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.sql.Connection;
@@ -81,6 +82,26 @@ public class PlanCheckActivity extends ListActivity implements AdapterView.OnIte
         builder.setTitle("打卡确认").setMessage("确定完成任务了吗？").setPositiveButton("Yes",new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+
+                TextView planTitle = findViewById(R.id.plan_title_check);
+                final String title=planTitle.getText().toString();
+                //Android4.0以后不支持在主线程进行耗时操作，所以需要新开一条线程操作数据库
+
+                Runnable sqlRunnable = new Runnable() {
+                    @Override
+                    public void run() {
+                        SQLHelper sqlHelper = new SQLHelper();
+                        Connection con = sqlHelper.getConnection();
+                        try {
+                            sqlHelper.addTimes(con,title);
+                        } catch (SQLException e) {
+                            e.printStackTrace();
+                        }
+
+                    }
+                };
+                new Thread(sqlRunnable).start();
+
                 Toast.makeText(PlanCheckActivity.this,
                         "打卡完成，继续坚持哟！",
                         Toast.LENGTH_SHORT).show();

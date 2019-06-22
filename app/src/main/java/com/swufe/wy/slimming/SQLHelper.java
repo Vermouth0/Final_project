@@ -19,7 +19,6 @@ public class SQLHelper {
     public List<HashMap<String,String>> planList;
 
     public SQLHelper(){
-
     }
 
     //连接数据库
@@ -92,28 +91,59 @@ public class SQLHelper {
     }
 
     //获取指定标题的计划次数，返回int times
-    public int queryPlanTimes(String title) throws SQLException {
+    public int queryPlanTimes(Connection con,String title) throws SQLException {
         int times = 0;
-        Connection con = getConnection();
-        String sql = "select * from plan where title = "+ title;
+        String sql = "select * from plan where title = '"+ title+"'";
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(sql);
-        while (rs.next()) {
-            times = Integer.parseInt(rs.getString("content"));
+
+        try {
+            while (rs.next()) {
+                times = Integer.parseInt(rs.getString("time"));
+            }
+            rs.close();
+            stmt.close();
+        } catch (SQLException e) {
+
+        } finally {
+            if (con!= null)
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                }
         }
         return times;
     }
 
     //实现打卡次数的更新
-    public void addTimes(String title) throws SQLException {
+    public void addTimes(Connection con,String title) throws SQLException {
 
-        int times = queryPlanTimes(title);
-        times = times+1;
-
-        Connection con = getConnection();
-        String sql = "update plan set times =" + times + " where title = "+ title;
+        int times = 0;
+        String sql_1 = "select * from plan where title = '"+ title+"'";
         Statement stmt = con.createStatement();
-        stmt.executeQuery(sql);
+        ResultSet rs = stmt.executeQuery(sql_1);
+
+        try {
+            while (rs.next()) {
+                times = Integer.parseInt(rs.getString("time"));
+                Log.i(TAG, "addTimes: 获得次数"+times);
+                times = times+1;
+                Log.i(TAG, "addTimes: 次数+1："+times);
+                String sql = "update plan set time = '" + times + "' where title = '"+ title + "'";
+                Log.i(TAG, "addTimes:sql语句："+sql);
+                stmt.executeUpdate(sql);
+            }
+            rs.close();
+            stmt.close();
+        } catch (SQLException e) {
+
+        } finally {
+            if (con!= null)
+                try {
+                    con.close();
+                } catch (SQLException e) {
+                }
+        }
     }
 
 }
