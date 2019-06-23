@@ -22,4 +22,5 @@
     <string name="hont_content">请输入内容</string>
     <string name="btn_check_edit">确认修改</string>
     <string name="label_plan_add">新增计划</string>
+    <string name="btn_add">新增计划</string>
 </resources>
