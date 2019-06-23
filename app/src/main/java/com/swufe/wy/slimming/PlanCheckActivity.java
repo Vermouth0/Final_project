@@ -33,11 +33,12 @@ public class PlanCheckActivity extends ListActivity implements AdapterView.OnIte
         Dialog dialog = new Dialog();
         dialog.showProgressDialog(this);
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_plan_check);
+        setContentView(R.layout.activity_plan_check);
 
         this.setListAdapter(listItemAdapter);
 
         new Thread(runnable).start();
+
         handler = new Handler() {
             @Override
             public void handleMessage(Message msg) {

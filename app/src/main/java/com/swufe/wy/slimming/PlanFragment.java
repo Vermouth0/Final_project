@@ -64,6 +64,15 @@ public class PlanFragment extends Fragment {
             }
         });
 
+        Button btnShow = getActivity().findViewById(R.id.button_show);
+        btnShow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),PlanReportActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 

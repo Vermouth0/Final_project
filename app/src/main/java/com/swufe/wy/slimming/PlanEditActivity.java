@@ -34,7 +34,7 @@ public class PlanEditActivity extends ListActivity implements AdapterView.OnItem
         Dialog dialog = new Dialog();
         dialog.showProgressDialog(this);
         super.onCreate(savedInstanceState);
-        //setContentView(R.layout.activity_plan_edit);
+        setContentView(R.layout.activity_plan_edit);
 
         //载入数据
         this.setListAdapter(listItemAdapter);

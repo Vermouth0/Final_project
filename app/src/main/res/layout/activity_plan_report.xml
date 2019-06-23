@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PlanReportActivity"
+    android:orientation="vertical"
+    android:background="@drawable/bg_blue">
+
+    <RelativeLayout
+        android:id="@+id/title_back"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@color/theme_blue_two">
+        <ImageView
+            android:id="@+id/left_btn"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/back"
+            android:contentDescription="@string/descrip_title1" />
+
+        <TextView
+            android:id="@+id/titles"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="@string/report"
+            android:textColor="@color/div_white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginTop="40dp"
+        >
+
+        <TextView
+            android:id="@+id/report_title"
+            android:layout_width="80dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/report_item"
+            android:gravity="center"
+            android:text="@string/show_title"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/report_times"
+            android:layout_width="80dp"
+            android:layout_height="36dp"
+            android:layout_weight="1"
+            android:background="@drawable/report_item"
+            android:gravity="center"
+            android:text="@string/show_times"
+            android:textColor="@android:color/black"
+            android:textSize="18sp" />
+    </LinearLayout>
+    <ListView android:id="@android:id/list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"/>
+</LinearLayout>

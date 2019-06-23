@@ -23,4 +23,13 @@
     <string name="btn_check_edit">确认修改</string>
     <string name="label_plan_add">新增计划</string>
     <string name="btn_add">新增计划</string>
+    <string name="title_check">计划打卡</string>
+    <string name="descrip_title1">TODO</string>
+    <string name="descript_girl">descript_girl</string>
+    <string name="home_default_1">根据【21天法则】</string>
+    <string name="home_default_2">只要坚持21天，</string>
+    <string name="home_default_3">就能养成一个好的习惯。</string>
+    <string name="report">计划报告</string>
+    <string name="show_title">我的计划</string>
+    <string name="show_times">完成次数</string>
 </resources>

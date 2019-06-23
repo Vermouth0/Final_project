@@ -33,12 +33,6 @@ public class HomeFragment extends Fragment {
         TextView tv = getView().findViewById(R.id.homeTextView1);
         tv.setText("主页");
 
-        ViewPager viewPager = getView().findViewById(R.id.viewpager_home);
-        HomeAdapter pageAdapter = new HomeAdapter(getFragmentManager());
-        viewPager.setAdapter(pageAdapter);
-
-        TabLayout tabLayout = getView().findViewById(R.id.home_tabs);
-        tabLayout.setupWithViewPager(viewPager);
     }
 
 

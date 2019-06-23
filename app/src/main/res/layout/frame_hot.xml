@@ -10,10 +10,11 @@
         android:id="@+id/hotTextView1"
         style="@android:style/DeviceDefault.Light.ButtonBar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="50dp"
         android:text="@string/frame_hot"
         android:gravity="center"
-        android:textSize="28sp" />
+        android:textSize="28sp"
+        android:background="@color/theme_blue_two"/>
     <View
         android:layout_width="match_parent"
         android:layout_height="2dp"

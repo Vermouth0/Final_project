@@ -1,5 +1,6 @@
 package com.swufe.wy.slimming;
 
+import android.app.Activity;
 import android.os.Handler;
 import android.os.Looper;
 import android.support.v7.app.AppCompatActivity;
@@ -12,7 +13,7 @@ import android.widget.Toast;
 import java.sql.Connection;
 import java.sql.SQLException;
 
-public class PlanAddActivity extends AppCompatActivity implements View.OnClickListener {
+public class PlanAddActivity extends Activity implements View.OnClickListener {
 
     EditText editTitle, editContent;
     String TAG = "PlanAddActivity";

@@ -7,9 +7,12 @@
         <TextView
             android:id="@+id/plan_title_edit"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:text="@string/app_name"
-            android:textSize="16sp" />
+            android:textSize="18sp"
+            android:textColor="@android:color/background_dark"
+            android:gravity="center"
+            android:background="@color/b2"/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -18,10 +21,10 @@
 
             <TextView
                 android:id="@+id/plan_content_edit"
-                android:layout_width="260dp"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
                 android:text="@string/app_name"
-                android:textSize="14sp" />
+                android:textSize="16sp" />
         </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"

@@ -17,7 +17,6 @@ public class SQLHelper {
     Connection con;
     public final String TAG="SQLHelper";
     public List<HashMap<String,String>> planList;
-
     public SQLHelper(){
     }
 
@@ -61,6 +60,41 @@ public class SQLHelper {
                 HashMap<String, String> map = new HashMap<String, String>();
                 map.put("plan_title", title);
                 map.put("plan_content", content);
+                planList.add(map);
+            }
+            rs.close();
+            stmt.close();
+        } catch (SQLException e) {
+
+        } finally {
+            if (con1 != null)
+                try {
+                    con1.close();
+                } catch (SQLException e) {
+                }
+        }
+
+    }
+    //获取所有计划内容（标题+次数），存放在全局变量planList中
+    public void getPlanTimes(Connection con1)  {
+        planList = new ArrayList<HashMap<String, String>>();
+        //HashMap<String, String> map =new HashMap<String, String>(); 不能定义在这里，要定义在循环里
+        try {
+            String sql = "select * from plan";        //查询“plan”表的所有内容
+            Statement stmt = con1.createStatement();        //创建Statement
+            ResultSet rs = stmt.executeQuery(sql);          //ResultSet类似Cursor
+
+            while (rs.next()) {
+
+                Log.i(TAG, "testConnection: title" + rs.getString("title"));
+                Log.i(TAG, "testConnection: content" + rs.getString("time"));
+                //Log.i(TAG, "testConnection: phoneNo"+rs.getString("times"));
+
+                String title = rs.getString("title");
+                String content = rs.getString("time");
+                HashMap<String, String> map = new HashMap<String, String>();
+                map.put("plan_title", title);
+                map.put("plan_times", content);
                 planList.add(map);
             }
             rs.close();

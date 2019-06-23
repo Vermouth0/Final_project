@@ -4,11 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".PlanCheckActivity">
+    tools:context=".PlanCheckActivity"
+    android:background="@drawable/bg_blue">
+    <include layout="@layout/layout_title"></include>
 
     <ListView android:id="@android:id/list"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"/>
+        android:layout_height="fill_parent"
+        android:layout_marginTop="70dp"/>
 
 
 </android.support.constraint.ConstraintLayout>
