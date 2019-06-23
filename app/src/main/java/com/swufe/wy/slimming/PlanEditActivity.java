@@ -3,6 +3,7 @@ package com.swufe.wy.slimming;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
@@ -30,6 +31,8 @@ public class PlanEditActivity extends ListActivity implements AdapterView.OnItem
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Dialog dialog = new Dialog();
+        dialog.showProgressDialog(this);
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_plan_edit);
 
@@ -82,7 +85,7 @@ public class PlanEditActivity extends ListActivity implements AdapterView.OnItem
 
         //传递参数：被点击的listView中的title被传递到修改界面
         TextView planTitle = findViewById(R.id.plan_title_edit);
-        final String title=planTitle.getText().toString();
+        String title = planTitle.getText().toString();
         intent.putExtra("plan_title",title);
 
         startActivity(intent);

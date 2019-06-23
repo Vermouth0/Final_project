@@ -1,6 +1,7 @@
 package com.swufe.wy.slimming;
 
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
@@ -41,6 +42,7 @@ public class PlanFragment extends Fragment {
             public void onClick(View v) {
               Intent intent=new Intent(getActivity(),PlanCheckActivity.class);
               startActivity(intent);
+
             }
         });
 

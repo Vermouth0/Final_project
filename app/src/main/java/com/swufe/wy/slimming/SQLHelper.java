@@ -81,12 +81,12 @@ public class SQLHelper {
      public String queryPlanContent(Connection con,String title) throws SQLException {
         String content = "";
         String sql = "select * from plan where title = '"+ title + "'";
+         Log.i(TAG, "queryPlanContent: sql:"+sql);
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(sql);
-        if (rs != null) {
+        while (rs.next()){
             content = rs.getString("content");
-        }else{
-            return null;
+            Log.i(TAG, "queryPlanContent: content"+content);
         }
         return content;
     }
@@ -149,6 +149,7 @@ public class SQLHelper {
 
     public void editContent(Connection con,String title,String content) throws SQLException {
         String sql = "update plan set content = '" + content + "' where title = '"+ title + "'";
+        Log.i(TAG, "editContent: updateSQL"+sql);
         Statement stmt = con.createStatement();
         stmt.executeUpdate(sql);
     }

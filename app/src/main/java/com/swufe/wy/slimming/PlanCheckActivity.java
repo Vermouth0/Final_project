@@ -2,6 +2,7 @@ package com.swufe.wy.slimming;
 
 import android.app.AlertDialog;
 import android.app.ListActivity;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.os.Handler;
 import android.os.Message;
@@ -29,6 +30,8 @@ public class PlanCheckActivity extends ListActivity implements AdapterView.OnIte
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        Dialog dialog = new Dialog();
+        dialog.showProgressDialog(this);
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_plan_check);
 
@@ -55,7 +58,6 @@ public class PlanCheckActivity extends ListActivity implements AdapterView.OnIte
 
     }
     Runnable runnable = new Runnable() {
-        private Connection con = null;
 
         @Override
         public void run() {
@@ -117,4 +119,6 @@ public class PlanCheckActivity extends ListActivity implements AdapterView.OnIte
         builder.setIcon(R.drawable.plan_1);
         builder.create().show();
     }
+
+
 }
