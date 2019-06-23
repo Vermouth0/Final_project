@@ -78,14 +78,15 @@ public class SQLHelper {
     }
 
     //获取指定标题的计划内容（内容），返回content
-     public String queryPlanContent(String title) throws SQLException {
+     public String queryPlanContent(Connection con,String title) throws SQLException {
         String content = "";
-        Connection con = getConnection();
-        String sql = "select * from plan where title = "+ title;
+        String sql = "select * from plan where title = '"+ title + "'";
         Statement stmt = con.createStatement();
         ResultSet rs = stmt.executeQuery(sql);
-        while (rs.next()) {
+        if (rs != null) {
             content = rs.getString("content");
+        }else{
+            return null;
         }
         return content;
     }
@@ -144,6 +145,29 @@ public class SQLHelper {
                 } catch (SQLException e) {
                 }
         }
+    }
+
+    public void editContent(Connection con,String title,String content) throws SQLException {
+        String sql = "update plan set content = '" + content + "' where title = '"+ title + "'";
+        Statement stmt = con.createStatement();
+        stmt.executeUpdate(sql);
+    }
+
+    //新增数据
+    public void addPlan(Connection con,String title,String content) throws SQLException {
+
+        String sql = "INSERT INTO plan (title, content) VALUES ('" + title + "', '" + content + "')";
+        Statement stmt = con.createStatement();
+        stmt.executeUpdate(sql);
+    }
+
+    //删除数据
+    public void deletePlan(Connection con,String title) throws SQLException {
+
+        String sql = "delete from plan where title = '"+ title+"'";
+        Log.i(TAG, "deletePlan: sql:"+sql);
+        Statement stmt = con.createStatement();
+        stmt.executeUpdate(sql);
     }
 
 }

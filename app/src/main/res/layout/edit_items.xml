@@ -6,7 +6,7 @@
 
         <TextView
             android:id="@+id/plan_title_edit"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
             android:textSize="16sp" />
@@ -22,22 +22,33 @@
                 android:layout_height="wrap_content"
                 android:text="@string/app_name"
                 android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/btn_edit_edit"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/btn_edit_edit"
-                android:textSize="14sp" />
-
-            <Button
-                android:id="@+id/btn_edit_delete"
-                style="?android:attr/buttonBarButtonStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/btn_edit_delete"
-                android:textSize="14sp" />
         </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="end">
+        <Button
+            android:id="@+id/btn_edit_edit"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_edit_edit"
+            android:textSize="14sp"
+            android:focusable="false"/>
+
+        <Button
+            android:id="@+id/btn_edit_delete"
+            style="?android:attr/buttonBarButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_edit_delete"
+            android:textSize="14sp"
+            android:focusable="false"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/div_white" />
 
 </LinearLayout>

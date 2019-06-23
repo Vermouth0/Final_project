@@ -44,6 +44,15 @@ public class PlanFragment extends Fragment {
             }
         });
 
+        Button btnEdit = getActivity().findViewById(R.id.button_edit);
+        btnEdit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),PlanEditActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
     }
 

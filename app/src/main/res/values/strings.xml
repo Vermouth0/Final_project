@@ -6,8 +6,8 @@
     <string name="frame_home">主页</string>
     <string name="frame_hot">热量</string>
     <string name="frame_plan">计划</string>
-    <string name="btn_edit_edit">编辑</string>
-    <string name="btn_edit_delete">删除</string>
+    <string name="btn_edit_edit">点击编辑</string>
+    <string name="btn_edit_delete">长按删除</string>
     <string name="btn_check">打卡</string>
     <string name="descript_plan_check">plan_check</string>
     <string name="descript_plan_edit">plan_edit</string>
@@ -15,4 +15,9 @@
     <string name="label_plan_check">计划打卡</string>
     <string name="label_plan_edit">我的计划</string>
     <string name="label_plan_show">计划报告</string>
+    <string name="edit_plan_title">计划标题:</string>
+    <string name="edit_plan_content">计划内容:</string>
+    <string name="hint_title">请输入标题</string>
+    <string name="hont_content">请输入内容</string>
+    <string name="btn_check_edit">确认修改</string>
 </resources>
