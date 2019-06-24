@@ -5,54 +5,88 @@
     android:layout_height="match_parent"
     tools:context=".PlanEditActivityEdit"
     android:orientation="vertical"
-    android:theme="@style/Base.Theme.AppCompat"
+    android:theme="@style/Theme.AppCompat.Light.NoActionBar"
+    android:background="@color/theme_blue_one"
    >
-
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/title_back"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="100dp"
-        android:layout_gravity="center">
+        android:layout_height="50dp"
+        android:background="@color/theme_blue_two">
+        <ImageView
+            android:id="@+id/left_btn"
+            android:layout_marginStart="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:scaleType="center"
+            android:src="@mipmap/back"
+            android:contentDescription="@string/descrip_title1" />
 
         <TextView
-            android:id="@+id/edit_title_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/edit_plan_title" />
-        <EditText
-            android:id="@+id/edit_title"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/hint_title"
-            android:inputType="text"
-            android:autofillHints="" />
-    </LinearLayout>
-
-    <LinearLayout
+            android:id="@+id/titles"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:gravity="center"
+            android:text="@string/edit"
+            android:textColor="@color/div_white"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/edit_title_label"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:layout_marginTop="60dp"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:text="@string/edit_plan_title"
+        android:textSize="20sp"
+        android:textColor="@android:color/background_dark"/>
+    <EditText
+        android:id="@+id/edit_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_title"
+        android:inputType="text"
+        android:autofillHints=""
+        android:background="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
+
+
+
+    <TextView
+        android:id="@+id/edit_content_label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
-        android:layout_gravity="center">
+        android:layout_marginBottom="10dp"
+        android:text="@string/edit_plan_content"
+        android:gravity="center"
+        android:textSize="20sp"
+        android:textColor="@android:color/background_dark" />
+    <EditText
+        android:id="@+id/edit_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/hint_content"
+        android:inputType="textMultiLine"
+        android:autofillHints=""
+        android:lines="6"
+        android:padding="5dp"
+        android:gravity="top"
+        android:background="#FFFFFF"
+        android:textSize="20sp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"/>
 
-        <TextView
-            android:id="@+id/edit_content_label"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/edit_plan_content" />
-        <EditText
-            android:id="@+id/edit_content"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="@string/hint_content"
-            android:inputType="text"
-            android:autofillHints="" />
-    </LinearLayout>
 
     <Button
         android:id="@+id/btn_check_edit"
@@ -60,8 +94,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="60dp"
-        android:text="@string/btn_check_edit" />
-
-
+        android:text="@string/btn_check_edit"
+        android:background="@drawable/btn_shape"/>
 
 </LinearLayout>

@@ -29,7 +29,7 @@ public class Dialog {
                 int progress= 0;
                 while (progress < MAX_PROGRESS){
                     try {
-                        Thread.sleep(18);
+                        Thread.sleep(20);
                         progress++;
                         progressDialog.setProgress(progress);
                     } catch (InterruptedException e){

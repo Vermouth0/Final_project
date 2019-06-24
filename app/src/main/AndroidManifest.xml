@@ -22,8 +22,7 @@
         <activity android:name=".PlanCheckActivity" />
         <activity android:name=".PlanEditActivity" />
         <activity
-            android:name=".PlanEditActivityEdit"
-            android:theme="@style/Base.Theme.AppCompat.Dialog" />
+            android:name=".PlanEditActivityEdit" />
         <activity android:name=".PlanAddActivity" />
         <activity android:name=".PlanReportActivity"></activity>
     </application>
