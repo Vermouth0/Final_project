@@ -87,6 +87,15 @@ public class HotFragment extends Fragment {
 
             }
         });
+        Button btnSnow = getActivity().findViewById(R.id.btn_snow);
+        btnSnow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://xueqiu.com/"));
+                startActivity(intent);
+
+            }
+        });
         Button btnFood = getActivity().findViewById(R.id.btn_food);
         btnFood.setOnClickListener(new View.OnClickListener() {
             @Override
