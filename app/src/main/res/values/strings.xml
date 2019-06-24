@@ -1,9 +1,9 @@
 <resources>
-    <string name="app_name">Slimming</string>
+    <string name="app_name">小习惯</string>
     <string name="radio_home">主页</string>
     <string name="radio_plan">计划</string>
     <string name="radio_hot">胡桃夹子</string>
-    <string name="frame_home">主页</string>
+    <string name="frame_home">小习惯</string>
     <string name="frame_hot">胡桃夹子</string>
     <string name="frame_plan">计划</string>
     <string name="btn_edit_edit">点击编辑</string>
@@ -13,7 +13,7 @@
     <string name="descript_plan_edit">plan_edit</string>
     <string name="descript_plan_show">plan_show</string>
     <string name="label_plan_check">计划打卡</string>
-    <string name="label_plan_edit">我的计划</string>
+    <string name="label_plan_edit">管理计划</string>
     <string name="label_plan_show">计划报告</string>
     <string name="edit_plan_title">计划标题:</string>
     <string name="edit_plan_content">计划内容:</string>
@@ -26,7 +26,7 @@
     <string name="title_check">计划打卡</string>
     <string name="descrip_title1">TODO</string>
     <string name="descript_girl">descript_girl</string>
-    <string name="home_default_1">根据【21天法则】</string>
+    <string name="home_default_1">根据【21天法则】：</string>
     <string name="home_default_2">只要坚持21天，</string>
     <string name="home_default_3">就能养成一个好的习惯。</string>
     <string name="report">计划报告</string>
@@ -37,4 +37,16 @@
     <string name="w3c">w3cschool</string>
     <string name="csdn">CSDN</string>
     <string name="runoob">Runoob</string>
+    <string name="news">新闻资讯</string>
+    <string name="weibo">新浪微博</string>
+    <string name="people">人民网</string>
+    <string name="snow">雪球财经</string>
+    <string name="helper">生活助手</string>
+    <string name="food">吃什么</string>
+    <string name="rate">汇率计算</string>
+    <string name="weather">天气预报</string>
+    <string name="wear">穿什么</string>
+    <string name="play">玩什么</string>
+    <string name="eat">Eat What?</string>
+    <string name="play_">Play what?</string>
 </resources>

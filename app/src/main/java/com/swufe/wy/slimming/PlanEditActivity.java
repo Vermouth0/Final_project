@@ -84,7 +84,7 @@ public class PlanEditActivity extends ListActivity implements AdapterView.OnItem
         Intent intent=new Intent(this,PlanEditActivityEdit.class);
 
         //传递参数：被点击的listView中的title被传递到修改界面
-        TextView planTitle = findViewById(R.id.plan_title_edit);
+        TextView planTitle = view.findViewById(R.id.plan_title_edit);
         String title = planTitle.getText().toString();
         intent.putExtra("plan_title",title);
 

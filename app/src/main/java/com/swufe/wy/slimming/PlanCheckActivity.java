@@ -76,7 +76,7 @@ public class PlanCheckActivity extends ListActivity implements AdapterView.OnIte
     };
 
     @Override
-    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+    public void onItemClick(AdapterView<?> parent, final View view, int position, long id) {
         Log.i(TAG, "onItemClick: 打卡");
         Log.i(TAG, "onItemClick: position="+position);
 
@@ -86,8 +86,9 @@ public class PlanCheckActivity extends ListActivity implements AdapterView.OnIte
             @Override
             public void onClick(DialogInterface dialog, int which) {
 
-                TextView planTitle = findViewById(R.id.plan_title_check);
+                TextView planTitle = view.findViewById(R.id.plan_title_check);
                 final String title=planTitle.getText().toString();
+                Log.i(TAG, "onClick: 获得的标题"+title);
                 //Android4.0以后不支持在主线程进行耗时操作，所以需要新开一条线程操作数据库
 
                 Runnable sqlRunnable = new Runnable() {

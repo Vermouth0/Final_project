@@ -69,6 +69,53 @@ public class HotFragment extends Fragment {
 
             }
         });
+        Button btnWeibo = getActivity().findViewById(R.id.btn_weibo);
+        btnWeibo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://weibo.com/"));
+                startActivity(intent);
+
+            }
+        });
+        Button btnPeople = getActivity().findViewById(R.id.btn_people);
+        btnPeople.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.people.com.cn/"));
+                startActivity(intent);
+
+            }
+        });
+        Button btnFood = getActivity().findViewById(R.id.btn_food);
+        btnFood.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),FoodActivity.class);
+                startActivity(intent);
+
+            }
+        });
+        Button btnWeather = getActivity().findViewById(R.id.btn_weather);
+        btnWeather.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://tianqi.so.com/weather/101270101"));
+                startActivity(intent);
+
+            }
+        });
+        Button btnPlay = getActivity().findViewById(R.id.btn_play);
+        btnPlay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(),PlayActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
 
     }
 
