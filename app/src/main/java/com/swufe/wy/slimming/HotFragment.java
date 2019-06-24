@@ -1,15 +1,18 @@
 package com.swufe.wy.slimming;
 
 
+import android.content.Intent;
 import android.database.Cursor;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseExpandableListAdapter;
+import android.widget.Button;
 import android.widget.ExpandableListView;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -37,7 +40,36 @@ public class HotFragment extends Fragment {
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
         TextView tv = getView().findViewById(R.id.hotTextView1);
-        tv.setText("热量");
+        tv.setText("胡桃夹子");
+
+        Button btnW3c = getActivity().findViewById(R.id.btn_w3c);
+        btnW3c.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.w3school.com.cn/"));
+                startActivity(intent);
+
+            }
+        });
+        Button btnCSDN = getActivity().findViewById(R.id.btn_csdn);
+        btnCSDN.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.csdn.net/"));
+                startActivity(intent);
+
+            }
+        });
+        Button btnRunoob = getActivity().findViewById(R.id.btn_runoob);
+        btnRunoob.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(Intent.ACTION_VIEW,Uri.parse("https://www.runoob.com/"));
+                startActivity(intent);
+
+            }
+        });
+
     }
 
 

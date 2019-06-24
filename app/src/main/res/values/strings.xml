@@ -2,9 +2,9 @@
     <string name="app_name">Slimming</string>
     <string name="radio_home">主页</string>
     <string name="radio_plan">计划</string>
-    <string name="radio_hot">热量</string>
+    <string name="radio_hot">胡桃夹子</string>
     <string name="frame_home">主页</string>
-    <string name="frame_hot">热量</string>
+    <string name="frame_hot">胡桃夹子</string>
     <string name="frame_plan">计划</string>
     <string name="btn_edit_edit">点击编辑</string>
     <string name="btn_edit_delete">长按删除</string>
@@ -33,4 +33,8 @@
     <string name="show_title">我的计划</string>
     <string name="show_times">完成次数</string>
     <string name="edit">编辑计划</string>
+    <string name="program">编程学习</string>
+    <string name="w3c">w3cschool</string>
+    <string name="csdn">CSDN</string>
+    <string name="runoob">Runoob</string>
 </resources>
